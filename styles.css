@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 1500px;
+}
+
+.header-conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-section {
+    width: 80%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.title-content {
+    padding: 0px 0;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+    color:#4c4e58 ;
+}
+
+hr {
+    height: 2px;
+    background-color: #000;
+}
+.seccion-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.seccion-a {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+}
+
+.seccion-b {
+    width: 80%;
+    margin-left: 20px;
+}
+
+.descripcion-item {
+    margin-top: 10px;
+}
+
+.img-icon { 
+    width: 2vw;
+    height: 2vw;
+    vertical-align: middle;
+}
+
+.special-font { 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ------------------------------------------IMPRIMIR------------------------------------------ */
+@media print {
+    .mostrar-al-imprimir {
+        display: block !important;
+    }
+
+    .ocultar-al-imprimir {
+        display: none !important;
+    }
+
+    .nav-header {
+        height: 0px;    
+    }
+    .title-header {
+        width: 100%;
+    }
+    .title-section {
+        width: 100%;
+    }
+}
+
+/* Hide elements with 'mostrar-al-imprimir' class on screen */
+.mostrar-al-imprimir {
+    display: none;
+}
+
+/* ------------------------------------------NAV------------------------------------------ */
+.nav-header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: #333;
+}
+
+.nav {
+    width: 100%;
+    padding: 0px;
+    text-align: left;
+}
+
+.nav a:hover {
+    transition: 0.3s ease;
+    background-color: #555;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.nav li a {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 5px 25px 5px 25px; 
+    display: block;
+    transition: 0.4s ease;
+}
+.nav > li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    z-index: 1;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li ul li{
+    position: relative;
+    
+}
+
+.nav li ul li ul{
+    top: 0px;
+    left: 140px;
+    border: 1px solid cornsilk;
+}
+
+/* ------------------------------------------RESPONSIVE------------------------------------------ */
+@media (max-width: 450px){
+    .title-header {
+        width: 95%;
+        font-size: 0.7rem;
+    }
+
+    .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+        width: 5vw;
+        height: 5vw;
+    }
+    .title-section {
+        width: 95%;
+    }
+    .seccion-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .seccion-a {
+        width: 100%;
+    }
+    .seccion-b {
+        width: 100%;
+        margin: 0px 0 10px 0;
+    }
+    .special-font { /* Esto es para que el texto sea más grande y en negrita */
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-header {
+        width: 100%;
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    } 
+}
